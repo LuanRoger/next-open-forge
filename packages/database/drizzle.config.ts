@@ -1,12 +1,13 @@
-import 'dotenv/config';
-import { defineConfig } from 'drizzle-kit';
-import { keys } from './keys';
+import { type Config, defineConfig } from "drizzle-kit";
+import { keys } from "./keys";
 
-export default defineConfig({
-  out: './drizzle',
-  schema: './schemas',
-  dialect: 'postgresql',
+export const drizzleConfig = {
+  out: "./drizzle",
+  schema: "./schemas",
+  dialect: "postgresql",
   dbCredentials: {
-    url: keys().DATABASE_URL!,
+    url: keys().DATABASE_URL,
   },
-});
+} satisfies Config;
+
+export default defineConfig(drizzleConfig);
