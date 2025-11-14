@@ -12,12 +12,7 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
   <html className={fonts} lang="en" suppressHydrationWarning>
     <body>
       <AnalyticsProvider>
-        <DesignSystemProvider
-          privacyUrl={new URL("/legal/privacy").toString()}
-          termsUrl={new URL("/legal/terms").toString()}
-        >
-          {children}
-        </DesignSystemProvider>
+        <DesignSystemProvider>{children}</DesignSystemProvider>
       </AnalyticsProvider>
     </body>
   </html>
