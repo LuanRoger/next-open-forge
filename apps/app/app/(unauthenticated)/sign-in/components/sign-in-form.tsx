@@ -1,3 +1,5 @@
+"use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import ActionButton from "@repo/design-system/components/action-button";
 import {
@@ -39,7 +41,7 @@ export default function SignInForm() {
     <form onSubmit={form.handleSubmit(onSubmit)}>
       <FieldSet>
         <FieldLegend>Sign In</FieldLegend>
-        <FieldGroup className="flex flex-row justify-between gap-2">
+        <FieldGroup>
           <Controller
             control={form.control}
             name="email"
