@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const App = async () => {
+export default async function App() {
   const pages = await database.query.pages.findMany();
 
   return (
@@ -26,10 +26,8 @@ const App = async () => {
             </div>
           ))}
         </div>
-        <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+        <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" />
       </div>
     </>
   );
-};
-
-export default App;
+}

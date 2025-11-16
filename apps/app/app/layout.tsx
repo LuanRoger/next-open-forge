@@ -8,14 +8,14 @@ type RootLayoutProperties = {
   readonly children: ReactNode;
 };
 
-const RootLayout = ({ children }: RootLayoutProperties) => (
-  <html className={fonts} lang="en" suppressHydrationWarning>
-    <body>
-      <AnalyticsProvider>
-        <DesignSystemProvider>{children}</DesignSystemProvider>
-      </AnalyticsProvider>
-    </body>
-  </html>
-);
-
-export default RootLayout;
+export default function RootLayout({ children }: RootLayoutProperties) {
+  return (
+    <html className={fonts} lang="en" suppressHydrationWarning>
+      <body>
+        <AnalyticsProvider>
+          <DesignSystemProvider>{children}</DesignSystemProvider>
+        </AnalyticsProvider>
+      </body>
+    </html>
+  );
+}
