@@ -1,6 +1,6 @@
 import { createMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/app/components/link";
 import SignInForm from "./components/sign-in-form";
 
 const title = "Welcome back";
@@ -12,7 +12,7 @@ export default function SignInPage() {
   return (
     <div className="flex flex-col gap-2">
       <SignInForm />
-      <Link href="/sign-up" className="self-end">
+      <Link className="self-end" href="/sign-up">
         <span className="text-muted-foreground text-sm hover:underline">
           Does not have an account? Sign up
         </span>
