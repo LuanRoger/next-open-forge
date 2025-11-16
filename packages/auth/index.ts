@@ -4,11 +4,12 @@ import "server-only";
 import { cacheTag, revalidateTag } from "next/cache";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { AUTH_TAGS_KEY } from "./constants";
 import { auth } from "./server";
 
 export async function currentUser() {
   "use cache: private";
-  cacheTag("user-logout");
+  cacheTag(AUTH_TAGS_KEY.USER_LOGOUT);
 
   const session = await auth.api.getSession({
     headers: await headers(),
@@ -22,7 +23,7 @@ export async function signOut() {
     headers: await headers(),
   });
 
-  revalidateTag("user-logout", "max");
+  revalidateTag(AUTH_TAGS_KEY.USER_LOGOUT, "max");
 }
 
 export async function requireAuthenticatedUser(redirectTo: string) {
