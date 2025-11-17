@@ -1,8 +1,8 @@
 "use server";
 
 import { auth } from "@repo/auth/server";
-import type { SignInFormSchema } from "../schemas";
 import { redirect } from "next/navigation";
+import type { SignInFormSchema } from "../schemas";
 
 export async function signInSubmit(data: SignInFormSchema) {
   const { email, password } = data;
@@ -14,7 +14,9 @@ export async function signInSubmit(data: SignInFormSchema) {
     },
   });
 
-  if (result.token) {
-    redirect("/");
+  if (!result.token) {
+    return;
   }
+
+  redirect("/");
 }
