@@ -10,6 +10,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=web --filter=storybook",
+    "dev:app": "turbo dev --filter=app --filter=storybook --filter=studio",
+    "dev:docs": "turbo dev --filter=docs",
     "check": "npx ultracite@latest check",
     "fix": "npx ultracite@latest fix",
     "test": "turbo test",

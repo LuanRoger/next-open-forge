@@ -1,4 +1,4 @@
-import { analytics } from "@repo/analytics/server";
+import { analytics } from "@repo/product/server";
 import { SidebarProvider } from "@repo/design-system/components/ui/sidebar";
 import { type ReactNode, Suspense } from "react";
 import { requireAuthenticatedUser } from "../actions/auth";

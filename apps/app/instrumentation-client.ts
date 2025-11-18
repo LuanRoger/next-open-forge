@@ -1,3 +1,3 @@
-import { initializeAnalytics } from "@repo/analytics/instrumentation-client";
+import { initializeAnalytics } from "@repo/product/instrumentation-client";
 
 initializeAnalytics();

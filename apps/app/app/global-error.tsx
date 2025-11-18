@@ -1,6 +1,6 @@
 "use client";
 
-import { analytics } from "@repo/analytics";
+import { analytics } from "@repo/product";
 import { Button } from "@repo/design-system/components/ui/button";
 import { fonts } from "@repo/design-system/lib/fonts";
 import type NextError from "next/error";

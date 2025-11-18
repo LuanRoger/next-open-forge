@@ -1,4 +1,4 @@
-import { parseError } from '@repo/analytics';
+import { parseError } from '@repo/product';
 import { clsx } from 'clsx';
 import type { ClassValue } from 'clsx';
 import { toast } from 'sonner';
