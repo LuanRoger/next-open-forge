@@ -7,18 +7,18 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@next/third-parties": "16.0.0",
+    "@next/third-parties": "16.0.3",
     "@t3-oss/env-nextjs": "^0.13.8",
-    "posthog-js": "^1.280.1",
-    "posthog-node": "^5.10.3",
+    "posthog-js": "^1.295.0",
+    "posthog-node": "^5.11.2",
     "react": "19.2.0",
     "server-only": "^0.0.1",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "24.9.1",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2"
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3"
   }
 }

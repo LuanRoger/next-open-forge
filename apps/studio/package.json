@@ -7,6 +7,6 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
-    "drizzle-kit": "0.31.6"
+    "drizzle-kit": "0.31.7"
   }
 }
