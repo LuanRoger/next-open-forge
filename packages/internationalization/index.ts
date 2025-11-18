@@ -9,7 +9,7 @@ export const locales = [
 
 export type Dictionary = typeof en;
 
-const dictionaries: Record<string, () => Promise<Dictionary>> =
+export const dictionaries: Record<string, () => Promise<Dictionary>> =
   Object.fromEntries(
     locales.map((locale) => [
       locale,
