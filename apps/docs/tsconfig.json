@@ -7,6 +7,10 @@
       "@/*": ["./*"],
       "fumadocs-mdx:collections/*": [".source/*"]
     },
+    "strict": false,
+    "skipLibCheck": true,
+    "declaration": false,
+    "declarationMap": false
   },
   "include": [
     "next-env.d.ts",

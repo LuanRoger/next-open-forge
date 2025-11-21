@@ -1,4 +1,4 @@
-import { analytics } from ".";
+import { product } from ".";
 import { log } from "./log";
 
 export const parseError = (error: unknown): string => {
@@ -13,7 +13,7 @@ export const parseError = (error: unknown): string => {
   }
 
   try {
-    analytics.captureException(error);
+    product.captureException(error);
     log.error(`Parsing error: ${message}`);
   } catch (newError) {
     console.error("Error parsing error:", newError);

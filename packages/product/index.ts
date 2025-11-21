@@ -1,2 +1,2 @@
-export { posthog as analytics } from "posthog-js";
+export { posthog as product } from "posthog-js";
 export { parseError } from "./error";

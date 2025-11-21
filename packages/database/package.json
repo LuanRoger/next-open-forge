@@ -6,7 +6,7 @@
   "scripts": {
     "push": "drizzle-kit push",
     "migrate": "drizzle-kit migrate",
-    "build": "drizzle-kit generate",
+    "generate": "drizzle-kit generate",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },

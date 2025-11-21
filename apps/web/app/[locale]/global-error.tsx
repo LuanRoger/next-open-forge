@@ -1,6 +1,6 @@
 "use client";
 
-import { analytics } from "@repo/product";
+import { product } from "@repo/product";
 import { Button } from "@repo/design-system/components/ui/button";
 import { fonts } from "@repo/design-system/lib/fonts";
 import type NextError from "next/error";
@@ -13,7 +13,7 @@ type GlobalErrorProperties = {
 
 const GlobalError = ({ error, reset }: GlobalErrorProperties) => {
   useEffect(() => {
-    analytics.captureException(error);
+    product.captureException(error);
   }, [error]);
 
   return (

@@ -2,7 +2,7 @@ import "./styles.css";
 import { DesignSystemProvider } from "@repo/design-system";
 import { fonts } from "@repo/design-system/lib/fonts";
 import { cn } from "@repo/design-system/lib/utils";
-import { getDictionary } from "@repo/internationalization";
+import { dictionaries, getDictionary } from "@repo/internationalization";
 import type { ReactNode } from "react";
 import { Header } from "./components/header";
 
@@ -11,6 +11,11 @@ type RootLayoutProperties = {
   readonly params: Promise<{
     locale: string;
   }>;
+};
+
+export const generateStaticParams = async () => {
+  const langauges = Object.keys(dictionaries);
+  return langauges.map((locale) => ({ locale }));
 };
 
 const RootLayout = async ({ children, params }: RootLayoutProperties) => {
