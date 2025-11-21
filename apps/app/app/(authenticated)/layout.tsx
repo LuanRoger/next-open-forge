@@ -1,4 +1,3 @@
-import { analytics } from "@repo/product/server";
 import { SidebarProvider } from "@repo/design-system/components/ui/sidebar";
 import { type ReactNode, Suspense } from "react";
 import { requireAuthenticatedUser } from "../actions/auth";
@@ -9,19 +8,7 @@ type AppLayoutProperties = {
 };
 
 async function AppLayoutContent({ children }: AppLayoutProperties) {
-  const { id, email, createdAt, name, username, displayUsername } =
-    await requireAuthenticatedUser();
-
-  analytics.identify({
-    distinctId: id,
-    properties: {
-      email,
-      createdAt,
-      name,
-      username,
-      displayUsername,
-    },
-  });
+  await requireAuthenticatedUser();
 
   return (
     <SidebarProvider>
