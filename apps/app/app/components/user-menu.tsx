@@ -10,7 +10,7 @@ import {
 } from "@repo/design-system/components/ui/dropdown-menu";
 import { Skeleton } from "@repo/design-system/components/ui/skeleton";
 import { LogOutIcon } from "lucide-react";
-import { signOut } from "../actions/auth";
+import { signOut } from "@repo/auth";
 import UserAvatar from "./user-avatar";
 
 export default async function UserMenu() {

@@ -2,7 +2,7 @@
 
 import { signUpEmail } from "@repo/auth";
 import { generateUsername } from "@repo/auth/utils/username";
-import { product } from "@repo/product";
+import { product } from "@repo/product/server";
 import { redirect } from "next/navigation";
 import type { SignUpFormSchema } from "../schemas";
 
@@ -18,7 +18,8 @@ export async function signUpSubmit(data: SignUpFormSchema) {
   }
 
   const { id } = user;
-  product.identify(id, {
+  product.identify({
+    distinctId: id,
     properties: {
       email,
       name,
