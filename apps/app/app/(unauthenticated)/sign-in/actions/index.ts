@@ -1,22 +1,25 @@
 "use server";
 
-import { auth } from "@repo/auth/server";
+import { signInEmail } from "@repo/auth";
+import { analytics } from "@repo/product";
 import { redirect } from "next/navigation";
 import type { SignInFormSchema } from "../schemas";
 
 export async function signInSubmit(data: SignInFormSchema) {
   const { email, password } = data;
 
-  const result = await auth.api.signInEmail({
-    body: {
-      email,
-      password,
-    },
-  });
+  const user = await signInEmail(email, password);
 
-  if (!result.token) {
-    return;
+  if (!user) {
+    return null;
   }
 
+  const { id, name } = user;
+  analytics.identify(id, {
+    properties: {
+      email,
+      name,
+    },
+  });
   redirect("/");
 }

@@ -18,6 +18,44 @@ export async function currentUser() {
   return session?.user;
 }
 
+export async function signInEmail(email: string, password: string) {
+  const result = await auth.api.signInEmail({
+    body: {
+      email,
+      password,
+    },
+  });
+
+  if (!result.user) {
+    return null;
+  }
+
+  return result.user;
+}
+
+export async function signUpEmail(
+  name: string,
+  username: string,
+  email: string,
+  password: string
+) {
+  const result = await auth.api.signUpEmail({
+    body: {
+      displayUsername: name,
+      username,
+      name,
+      email,
+      password,
+    },
+  });
+
+  if (!result.token) {
+    return null;
+  }
+
+  return result.user;
+}
+
 export async function signOut() {
   await auth.api.signOut({
     headers: await headers(),
@@ -34,4 +72,14 @@ export async function requireAuthenticatedUser(redirectTo: string) {
   }
 
   return user;
+}
+
+export async function requireUnauthenticatedUser(redirectTo: string) {
+  const user = await currentUser();
+
+  if (user) {
+    redirect(redirectTo);
+  }
+
+  return;
 }
