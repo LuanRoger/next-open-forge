@@ -24,11 +24,6 @@ export const generateMetadata = async ({
   return createMetadata(dictionary.web.home.meta);
 };
 
-export const generateStaticParams = async () => {
-  const langauges = Object.keys(dictionaries);
-  return langauges.map((locale) => ({ locale }));
-};
-
 const Home = async ({ params }: HomeProps) => {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
