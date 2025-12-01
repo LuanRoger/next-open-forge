@@ -7,7 +7,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@next/third-parties": "16.0.3",
+    "@next/third-parties": "16.0.6",
     "@t3-oss/env-nextjs": "^0.13.8",
     "posthog-js": "^1.297.2",
     "posthog-node": "^5.13.2",
