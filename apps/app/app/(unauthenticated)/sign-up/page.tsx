@@ -1,7 +1,7 @@
 import { createMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
-import SignUpForm from "./components/sign-up-form";
 import Link from "@/app/components/link";
+import SignUpForm from "./components/sign-up-form";
 
 const title = "Create an account";
 const description = "Enter your details to get started.";
