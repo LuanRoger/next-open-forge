@@ -1,4 +1,4 @@
-import { currentUser } from "@repo/auth";
+import { currentUser, signOut } from "@repo/auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +10,6 @@ import {
 } from "@repo/design-system/components/ui/dropdown-menu";
 import { Skeleton } from "@repo/design-system/components/ui/skeleton";
 import { LogOutIcon } from "lucide-react";
-import { signOut } from "@repo/auth";
 import UserAvatar from "./user-avatar";
 
 export default async function UserMenu() {

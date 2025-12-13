@@ -1,4 +1,4 @@
-import { dictionaries, getDictionary } from "@repo/internationalization";
+import { getDictionary } from "@repo/internationalization";
 import { createMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { Cases } from "./components/cases";

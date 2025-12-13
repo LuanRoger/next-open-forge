@@ -14,8 +14,8 @@ import { Input } from "@repo/design-system/components/ui/input";
 import { handleError } from "@repo/design-system/lib/utils";
 import { useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { type SignUpFormSchema, signUpFormSchema } from "../schemas";
 import { signUpSubmit } from "../actions";
+import { type SignUpFormSchema, signUpFormSchema } from "../schemas";
 
 export default function SignUpForm() {
   const form = useForm<SignUpFormSchema>({
