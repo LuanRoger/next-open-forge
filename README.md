@@ -24,7 +24,7 @@ next-open-forge comes with batteries included:
 
 ### Apps
 
-- **Web** — (Coming soon)
+- **Web** — Marketing website with landing pages
 - **App** — Main application with authentication and database integration
 - **Docs** — Documentation site powered by Mintlify
 - **Storybook** — Component development environment
@@ -89,14 +89,6 @@ Full documentation is available at [next-forge.com/docs](https://www.next-forge.
 ## Contributing
 
 We welcome contributions! See the [contributing guide](https://github.com/vercel/next-forge/blob/main/.github/CONTRIBUTING.md) for details.
-
-## Contributors
-
-<a href="https://github.com/vercel/next-forge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=vercel/next-forge" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
