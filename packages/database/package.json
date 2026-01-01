@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.13.8",
+    "@t3-oss/env-nextjs": "^0.13.10",
     "drizzle-orm": "^0.45.1",
     "pg": "^8.16.3",
     "server-only": "^0.0.1",
