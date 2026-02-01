@@ -9,7 +9,7 @@
   "dependencies": {
     "@next/third-parties": "16.0.10",
     "@t3-oss/env-nextjs": "^0.13.8",
-    "posthog-js": "^1.306.1",
+    "posthog-js": "^1.312.0",
     "posthog-node": "^5.17.2",
     "react": "19.2.3",
     "server-only": "^0.0.1",
