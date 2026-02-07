@@ -1,5 +1,5 @@
-import { Spinner } from "@repo/design-system/components/ui/spinner";
 import { Badge } from "@repo/design-system/components/ui/badge";
+import { Spinner } from "@repo/design-system/components/ui/spinner";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {

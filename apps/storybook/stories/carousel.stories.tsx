@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: This is for documentation purposes only, not a real implementation. */
 import {
   Carousel,
   CarouselContent,

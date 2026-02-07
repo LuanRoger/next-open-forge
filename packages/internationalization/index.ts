@@ -25,7 +25,7 @@ export const dictionaries: Record<string, () => Promise<Dictionary>> =
 export const getDictionary = async (locale: string): Promise<Dictionary> => {
   const normalizedLocale = locale.split("-")[0];
 
-  if (!locales.includes(normalizedLocale as any)) {
+  if (!locales.includes(normalizedLocale)) {
     return dictionaries.en();
   }
 
