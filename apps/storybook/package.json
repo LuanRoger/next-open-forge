@@ -10,8 +10,8 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@repo/design-system": "workspace:*",
     "@hookform/resolvers": "^5.2.2",
+    "@repo/design-system": "workspace:*",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
     "input-otp": "^1.4.2",
@@ -25,12 +25,13 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
     "@chromatic-com/storybook": "^5.0.0",
+    "@repo/typescript-config": "workspace:*",
     "@storybook/addon-onboarding": "^10.2.7",
     "@storybook/addon-themes": "^10.2.7",
     "@storybook/nextjs": "^10.2.7",
     "@storybook/react": "^10.2.7",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^25",
     "@types/react": "19.2.13",
     "@types/react-dom": "19.2.3",
