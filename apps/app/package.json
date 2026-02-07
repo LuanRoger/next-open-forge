@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build",
+    "build": "next build --port 3000",
     "start": "next start",
     "analyze": "npm run build",
     "test": "vitest run",
