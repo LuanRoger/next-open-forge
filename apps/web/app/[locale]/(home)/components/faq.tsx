@@ -38,12 +38,23 @@ export const FAQ = ({ dictionary }: FAQProps) => (
           </div>
         </div>
         <Accordion className="w-full" collapsible type="single">
-          {dictionary.web.home.faq.items.map((item, index) => (
-            <AccordionItem key={index} value={`index-${index}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
+          {dictionary.web.home.faq.items.map((item) => {
+            const raw =
+              typeof item.question === "string"
+                ? item.question
+                : String(item.question);
+            const id = raw || "faq-item";
+            const value = id
+              .toLowerCase()
+              .replace(/\s+/g, "-")
+              .replace(/[^a-z0-9-]/g, "");
+            return (
+              <AccordionItem key={id} value={value}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
       </div>
     </div>
